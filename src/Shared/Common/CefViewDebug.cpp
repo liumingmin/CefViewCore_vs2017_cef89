@@ -18,7 +18,7 @@ std::string toString(CefRefPtr<CefBrowser> browser)
     msg += "( ";
     msg += "CefBrowser:";
     msg += ", ptr=" + std::to_string((int64)browser.get());
-    msg += ", IsValid=" + std::to_string(browser->IsValid());
+    //msg += ", IsValid=" + std::to_string(browser->IsValid());
     msg += ", GetHost=" + std::to_string((int64)browser->GetHost().get());
     msg += ", CanGoBack=" + std::to_string(browser->CanGoBack());
     msg += ", CanGoForward=" + std::to_string(browser->CanGoForward());

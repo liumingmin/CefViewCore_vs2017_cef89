@@ -47,12 +47,12 @@ bool
 CefViewBrowserClient::OnQuotaRequest(CefRefPtr<CefBrowser> browser,
                                      const CefString& origin_url,
                                      int64 new_size,
-                                     CefRefPtr<CefCallback> callback)
+                                     CefRefPtr<CefRequestCallback> callback)
 {
   CEF_REQUIRE_IO_THREAD();
   static const int maxSize = 10 * 1024 * 1024;
   if (new_size <= maxSize)
-    callback->Continue();
+    callback->Continue(true);
   else
     callback->Cancel();
 

@@ -9,7 +9,8 @@
 #pragma region cef_headers
 #include <include/cef_app.h>
 #pragma endregion cef_headers
-
+#include <cctype>
+#include <clocale>
 #include <CefViewCoreProtocol.h>
 #include <Common/CefViewCoreLog.h>
 
